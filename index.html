@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=10">
+<link rel="stylesheet" href="style.css?v=11">
 </head>
 <body>
 
@@ -290,9 +290,22 @@
 (function () {
   var d = document.documentElement;
   function save(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  var switching = false;
   document.getElementById('lang-toggle').addEventListener('click', function () {
+    if (switching) return;
     var next = d.getAttribute('data-lang') === 'tr' ? 'en' : 'tr';
-    d.setAttribute('data-lang', next); d.setAttribute('lang', next); save('lang', next);
+    function apply() { d.setAttribute('data-lang', next); d.setAttribute('lang', next); save('lang', next); }
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { apply(); return; }
+    // Short cross-fade: fade text out, swap language, fade back in.
+    switching = true;
+    d.classList.add('lang-fade');
+    setTimeout(function () {
+      apply();
+      requestAnimationFrame(function () {
+        d.classList.remove('lang-fade');
+        setTimeout(function () { switching = false; }, 200);
+      });
+    }, 170);
   });
   document.getElementById('theme-toggle').addEventListener('click', function () {
     var cur = d.getAttribute('data-theme') ||
