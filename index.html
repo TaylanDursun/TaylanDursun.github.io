@@ -21,13 +21,14 @@
     try { lang = localStorage.getItem('lang'); theme = localStorage.getItem('theme'); } catch (e) {}
     if (!lang) lang = (navigator.language || '').toLowerCase().indexOf('tr') === 0 ? 'tr' : 'en';
     d.setAttribute('data-lang', lang); d.setAttribute('lang', lang);
+    d.classList.add('js');
     if (theme === 'light' || theme === 'dark') d.setAttribute('data-theme', theme);
   })();
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=9">
+<link rel="stylesheet" href="style.css?v=10">
 </head>
 <body>
 
@@ -299,6 +300,19 @@
     var next = cur === 'dark' ? 'light' : 'dark';
     d.setAttribute('data-theme', next); save('theme', next);
   });
+})();
+(function () {
+  // Scroll reveal: section headings and project cards fade in once.
+  var els = document.querySelectorAll('section:not(.hero) > h2, .project');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) { els.forEach(function (el) { el.classList.add('is-visible'); }); return; }
+  els.forEach(function (el) { el.classList.add('reveal'); });
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+  els.forEach(function (el) { io.observe(el); });
 })();
 (function () {
   // Play videos only while they are on screen.
