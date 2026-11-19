@@ -134,6 +134,14 @@ section > h2::after { content: ""; display: block; width: 100%; height: 2px; bac
 .js .reveal.is-visible { opacity: 1; transform: none; }
 .js section > h2.reveal::after { transform: scaleX(0); transform-origin: left; transition: transform .6s ease-out .15s; }
 .js section > h2.reveal.is-visible::after { transform: scaleX(1); }
+/* theme switch cross-fade (class is present only during the switch) */
+.theme-anim, .theme-anim *, .theme-anim *::before, .theme-anim *::after {
+  transition: background-color .4s ease, color .4s ease, border-color .4s ease,
+              text-decoration-color .4s ease, fill .4s ease, stroke .4s ease, box-shadow .4s ease !important;
+}
+.theme-anim #theme-toggle svg { animation: theme-icon .4s ease; }
+@keyframes theme-icon { from { transform: rotate(-90deg) scale(.6); opacity: 0; } to { transform: none; opacity: 1; } }
+
 @media (prefers-reduced-motion: reduce) {
   main, nav, .foot, .toggle .opt { transition: none; }
   .js .reveal, .js section > h2.reveal::after { opacity: 1; transform: none; transition: none; }

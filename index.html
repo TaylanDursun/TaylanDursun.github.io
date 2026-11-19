@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=11">
+<link rel="stylesheet" href="style.css?v=12">
 </head>
 <body>
 
@@ -311,7 +311,12 @@
     var cur = d.getAttribute('data-theme') ||
       (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     var next = cur === 'dark' ? 'light' : 'dark';
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { d.setAttribute('data-theme', next); save('theme', next); return; }
+    // Smooth colour cross-fade; transitions are on only during the switch.
+    d.classList.add('theme-anim');
     d.setAttribute('data-theme', next); save('theme', next);
+    clearTimeout(window.__themeT);
+    window.__themeT = setTimeout(function () { d.classList.remove('theme-anim'); }, 450);
   });
 })();
 (function () {
