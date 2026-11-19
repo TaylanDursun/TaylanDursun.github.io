@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ali Taylan Dursun</title>
+<meta name="description" content="Ali Taylan Dursun, control engineer in Istanbul. Robot control and simulation.">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://taylandursun.github.io/">
+<meta property="og:title" content="Ali Taylan Dursun">
+<meta property="og:description" content="Control engineer in Istanbul. Robot control and simulation.">
+<meta property="og:image" content="https://taylandursun.github.io/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script>
+  (function () {
+    var d = document.documentElement, lang = null, theme = null;
+    try { lang = localStorage.getItem('lang'); theme = localStorage.getItem('theme'); } catch (e) {}
+    if (!lang) lang = (navigator.language || '').toLowerCase().indexOf('tr') === 0 ? 'tr' : 'en';
+    d.setAttribute('data-lang', lang); d.setAttribute('lang', lang);
+    if (theme === 'light' || theme === 'dark') d.setAttribute('data-theme', theme);
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=9">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="brand" href="#">Ali Taylan Dursun</a>
+    <nav id="site-nav">
+      <a href="#about"><span lang="en">About</span><span lang="tr">Hakkımda</span></a>
+      <a href="#projects"><span lang="en">Projects</span><span lang="tr">Projeler</span></a>
+      <a href="#experience"><span lang="en">Experience</span><span lang="tr">Deneyim</span></a>
+      <a href="#education"><span lang="en">Education</span><span lang="tr">Eğitim</span></a>
+      <a href="#contact"><span lang="en">Contact</span><span lang="tr">İletişim</span></a>
+    </nav>
+    <div class="toggles">
+      <button type="button" id="lang-toggle" class="toggle" aria-label="Switch language / Dili değiştir">
+        <span class="opt" data-v="en">EN</span><span class="opt" data-v="tr">TR</span>
+      </button>
+      <button type="button" id="theme-toggle" class="toggle icon" aria-label="Toggle theme / Temayı değiştir">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
+      </button>
+      <button type="button" id="menu-toggle" class="toggle icon menu-btn" aria-label="Menu / Menü" aria-expanded="false" aria-controls="site-nav">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path class="l1" d="M4 7h16"/><path class="l2" d="M4 12h16"/><path class="l3" d="M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="hero wrap">
+  <div class="hero-text">
+    <h1><span lang="en">Hi, I'm Taylan.</span><span lang="tr">Merhaba, ben Taylan.</span></h1>
+
+    <p lang="en">I'm a control engineer based in Istanbul. I studied Control and Automation Engineering at
+      Istanbul Technical University, and I'm finishing the degree with an internship at Altınay Robot
+      Technologies, where I write the software that runs industrial servo motors over EtherCAT.</p>
+    <p lang="tr">İstanbul'da yaşayan bir kontrol mühendisiyim. İTÜ'de Kontrol ve Otomasyon Mühendisliği okudum;
+      lisansımı Altınay Robot Teknolojileri'ndeki stajımla tamamlıyorum. Orada endüstriyel servo motorları
+      EtherCAT üzerinden çalıştıran yazılımı yazıyorum.</p>
+
+    <p class="links">
+      <a href="assets/Ali_Taylan_Dursun_CV.pdf">CV (PDF)</a>
+      <a href="https://github.com/TaylanDursun">GitHub</a>
+      <a href="https://www.linkedin.com/in/ali-taylan-dursun-92a599231">LinkedIn</a>
+      <a href="mailto:tylndrsn@gmail.com"><span lang="en">Email</span><span lang="tr">E-posta</span></a>
+    </p>
+  </div>
+  <aside class="hero-side">
+    <!-- Photo goes here later:
+    <img class="hero-photo" src="assets/photo.jpg" alt="Ali Taylan Dursun">
+    -->
+    <figure class="hero-visual">
+      <img src="assets/robot-arm-v1.jpg" alt="My 3-joint desk robot arm, simulated in MuJoCo">
+    </figure>
+    <dl class="now">
+      <div><dt><span lang="en">Now</span><span lang="tr">Şu an</span></dt>
+        <dd><span lang="en">Control software intern at Altınay Robot Technologies</span><span lang="tr">Altınay Robot Teknolojileri'nde kontrol yazılımı stajyeri</span></dd></div>
+      <div><dt><span lang="en">Building</span><span lang="tr">Yapıyorum</span></dt>
+        <dd><span lang="en">A 3-joint desk robot arm, Jacobian next</span><span lang="tr">3 eklemli masaüstü robot kol; sırada Jacobian</span></dd></div>
+      <div><dt><span lang="en">Based in</span><span lang="tr">Konum</span></dt>
+        <dd><span lang="en">Istanbul</span><span lang="tr">İstanbul</span></dd></div>
+    </dl>
+  </aside>
+</section>
+
+<section id="about" class="wrap about">
+  <h2><span lang="en">About</span><span lang="tr">Hakkımda</span></h2>
+    <p lang="en">The part of robotics I like most is where the math meets the hardware. My own projects have
+      stayed in simulation so far: I derive the model by hand, write the controller and see what breaks in
+      simulation. The first time I tuned a real motor was during my internship, on a test bench. The next step
+      for me is taking my own projects onto real hardware.</p>
+    <p lang="tr">Robotikte en çok ilgimi çeken yer, matematiğin donanımla buluştuğu nokta. Kendi projelerim şimdiye
+      kadar simülasyonda kaldı: modeli elle türetiyorum, kontrolcüyü yazıyorum ve simülasyonda neyin
+      bozulduğuna bakıyorum. Gerçek bir motoru ilk kez stajımda, test tezgâhında ayarladım. Benim için sıradaki
+      adım, kendi projelerimi de gerçek donanıma taşımak.</p>
+
+    <p lang="en">I use AI tools every day, with a clear split. The theory stays with me: frames, DH tables and
+      derivations I work out by hand, because that's the part I need to understand. Routine code, plotting
+      scripts and tooling I hand to AI, mostly Claude Code, and then check its output against my own
+      derivations and tests. I also keep a "second brain": an Obsidian notebook connected to an AI assistant
+      that remembers my projects, notes and decisions from one session to the next. This site was made the
+      same way: I decided what goes in and how it looks, and the AI wrote the HTML.</p>
+    <p lang="tr">Yapay zekâ araçlarını her gün, net bir iş bölümüyle kullanıyorum. Teori bende kalıyor: çerçeveleri,
+      DH tablolarını ve türetmeleri elle yapıyorum, çünkü anlamam gereken kısım orası. Rutin kodu, grafik
+      betiklerini ve araç işlerini yapay zekâya, çoğunlukla Claude Code'a bırakıyorum; sonra çıktısını kendi
+      türetmelerim ve testlerimle kontrol ediyorum. Bir de "ikinci beyin" kullanıyorum: projelerimi, notlarımı
+      ve kararlarımı bir oturumdan ötekine hatırlayan bir yapay zekâ asistanına bağlı bir Obsidian defteri. Bu
+      site de böyle yapıldı: neyin gireceğine ve nasıl görüneceğine ben karar verdim, HTML'i yapay zekâ yazdı.</p>
+
+    <p lang="en">Next, I want to bring learning methods into that model, controller and simulation loop. That's
+      part of why I'm building a small robot arm from scratch, from the CAD model to the simulation: one day I'd
+      like to train and test policies on a robot I understand end to end. Outside of robots, I'm into
+      cinema, and I run tabletop role-playing games for my friends.</p>
+    <p lang="tr">Sıradaki hedefim, öğrenme yöntemlerini de bu model, kontrolcü ve simülasyon döngüsüne katmak. Küçük
+      bir robot kolu CAD modelinden simülasyonuna kadar sıfırdan yapmamın bir nedeni de bu: ileride uçtan uca
+      anladığım bir robot üzerinde politika eğitip denemek istiyorum. Robotlar dışında sinemaya ilgim var ve
+      arkadaşlarıma masaüstü rol yapma oyunları yönetiyorum.</p>
+</section>
+
+<section id="projects" class="wrap">
+  <h2><span lang="en">Projects</span><span lang="tr">Projeler</span></h2>
+
+  <article class="project">
+    <figure class="media wide">
+      <video src="assets/ur3-stabilization.mp4?v=3" poster="assets/ur3-stabilization.jpg?v=3" muted loop playsinline preload="metadata" data-autoplay aria-label="Husky base with UR3 arm driving over a hill and turning in place in Gazebo"></video>
+    </figure>
+    <div class="body">
+      <h3 lang="en">Keeping a robot arm steady on a moving base</h3>
+      <h3 lang="tr">Hareketli taban üzerinde robot kolu sabit tutmak</h3>
+      <p class="meta"><span lang="en">Graduation project with Burak Eren, 2025-2026</span><span lang="tr">Burak Eren ile bitirme projesi, 2025-2026</span></p>
+      <p lang="en">A UR3 arm sits on a Husky base that drives over ramps and bumps. While the base tilts and turns,
+        the arm has to keep its tool pointing the same way in the world. I derived the arm's dynamics by hand,
+        wrote the inverse kinematics solver in C++ from scratch, and used computed-torque control so the arm can
+        react to the base moving under it.</p>
+      <p lang="tr">Bir UR3 kol, rampalardan ve tümseklerden geçen bir Husky tabanının üstünde duruyor. Taban eğilip
+        dönerken kolun ucu dünyada hep aynı yöne bakmalı. Kolun dinamiğini elle türettim, ters kinematik
+        çözücüsünü C++'ta sıfırdan yazdım ve kolun altındaki tabanın hareketine tepki verebilmesi için
+        hesaplanmış tork kontrolü kullandım.</p>
+      <p lang="en">We compared six controllers (PD, PI+PD and PID, each with and without computed torque) on
+        randomly generated terrain and logged every run to MATLAB.</p>
+      <p lang="tr">Altı kontrolcüyü (PD, PI+PD ve PID; her biri hesaplanmış torklu ve torksuz) rastgele üretilmiş
+        arazilerde karşılaştırdık ve her koşuyu MATLAB'e kaydettik.</p>
+      <p class="stack">ROS 2 Jazzy · C++ · MATLAB · Gazebo · <a href="https://github.com/burakeren0/ur3_end_effector_stabilization"><span lang="en">code</span><span lang="tr">kod</span></a></p>
+    </div>
+  </article>
+
+  <article class="project">
+    <figure class="media wide">
+      <video src="assets/hand-teleop.mp4" poster="assets/hand-teleop.jpg" muted loop playsinline preload="metadata" data-autoplay aria-label="Hand motion replayed on a simulated robot arm"></video>
+    </figure>
+    <div class="body">
+      <h3 lang="en">A VLA policy and a hand-to-robot pipeline</h3>
+      <h3 lang="tr">Bir VLA politikası ve elden robota hareket aktarımı</h3>
+      <p class="meta"><span lang="en">Summer 2026</span><span lang="tr">Yaz 2026</span></p>
+      <p lang="en">Two small experiments. First I ran a pretrained vision-language-action policy (SmolVLA) on a
+        manipulation benchmark, and it looked like it did nothing. The model was fine: the evaluation episodes
+        were simply too short for it to finish the task.</p>
+      <p lang="tr">İki küçük deney. Önce önceden eğitilmiş bir görü-dil-eylem politikasını (SmolVLA) bir manipülasyon
+        testinde çalıştırdım ve hiçbir şey yapmıyor gibi göründü. Sorun modelde değildi: değerlendirme
+        bölümleri görevi bitirmesine yetmeyecek kadar kısaydı.</p>
+      <p lang="en">Then I took a video of a hand pouring from a cup, tracked the wrist with MediaPipe, turned it into
+        end-effector targets and replayed the motion on a simulated 6-DoF arm.</p>
+      <p lang="tr">Sonra bir bardaktan döken bir elin videosunu aldım, bileği MediaPipe ile takip ettim, bunu uç
+        işlevci hedeflerine çevirdim ve hareketi simülasyondaki 6 eksenli bir kolda tekrar oynattım.</p>
+      <p class="stack">LeRobot · MediaPipe · MuJoCo · PyTorch · <a href="https://github.com/TaylanDursun/smolvla-lerobot-hand-teleop"><span lang="en">code</span><span lang="tr">kod</span></a></p>
+    </div>
+  </article>
+
+  <article class="project">
+    <figure class="media wide">
+      <video src="assets/scout-nav.mp4" poster="assets/scout-nav.jpg" muted loop playsinline preload="metadata" data-autoplay aria-label="Scout robot in a Gazebo hospital world next to its RViz point cloud"></video>
+    </figure>
+    <div class="body">
+      <h3 lang="en">Finding the right floor</h3>
+      <h3 lang="tr">Doğru katı bulmak</h3>
+      <p class="meta"><span lang="en">Course project, team of three, 2025-2026</span><span lang="tr">Ders projesi, üç kişilik ekip, 2025-2026</span></p>
+      <p lang="en">An Agilex Scout has to work out which floor of a building it's on before it can navigate.
+        My part was mapping each floor with SLAM and telling floors apart by reading AprilTags with an RGB-D
+        camera. Once the robot knows where it is, it loads that floor's map and localizes on it with AMCL.</p>
+      <p lang="tr">Bir Agilex Scout, gezinmeye başlamadan önce binanın hangi katında olduğunu bulmak zorunda. Benim
+        payım her katı SLAM ile haritalamak ve RGB-D kamerayla AprilTag okuyarak katları birbirinden ayırmaktı.
+        Robot nerede olduğunu anlayınca o katın haritasını yükleyip AMCL ile üzerinde konumlanıyor.</p>
+      <p class="note" lang="en">The video is from an earlier assignment in the same course: the Scout in a simulated hospital, with its LiDAR and camera view in RViz.</p>
+      <p class="note" lang="tr">Video aynı dersin önceki bir ödevinden: simüle bir hastanedeki Scout ve RViz'de LiDAR ile kamera görüntüsü.</p>
+      <p class="stack">ROS 2 Humble · Nav2 · slam_toolbox · <a href="https://github.com/TaylanDursun/scout_multifloor_navigation"><span lang="en">code</span><span lang="tr">kod</span></a></p>
+    </div>
+  </article>
+
+  <article class="project">
+    <figure class="media">
+      <img src="assets/robot-arm-v1.jpg" alt="3-DoF robot arm model rendered in MuJoCo" loading="lazy">
+    </figure>
+    <div class="body">
+      <h3 lang="en">My own desk robot arm</h3>
+      <h3 lang="tr">Kendi masaüstü robot kolum</h3>
+      <p class="meta"><span lang="en">Side project, in progress</span><span lang="tr">Kişisel proje, devam ediyor</span></p>
+      <p lang="en">A three-joint arm I'm designing in Onshape and simulating in MuJoCo before building it. Forward
+        kinematics from my own DH table matches the simulator to within 2×10⁻⁷ mm. Jacobian and inverse
+        kinematics are next. The goal is to build the real arm and compare it with the simulation.</p>
+      <p lang="tr">Onshape'te tasarlayıp yapmadan önce MuJoCo'da simüle ettiğim üç eklemli bir kol. Kendi DH tablomdan
+        çıkan ileri kinematik, simülatörle 2×10⁻⁷ mm içinde örtüşüyor. Sırada Jacobian ve ters kinematik var.
+        Hedef gerçek kolu yapıp simülasyonla karşılaştırmak.</p>
+      <p class="stack">Onshape · MuJoCo · MATLAB</p>
+    </div>
+  </article>
+</section>
+
+<section id="experience" class="wrap">
+  <h2><span lang="en">Experience</span><span lang="tr">Deneyim</span></h2>
+  <ol class="timeline">
+    <li>
+      <div class="when"><span lang="en">Oct 2026 - now</span><span lang="tr">Eki 2026 - şu an</span></div>
+      <div>
+        <h3><span lang="en">Altınay Robot Technologies</span><span lang="tr">Altınay Robot Teknolojileri</span></h3>
+        <p class="org"><span lang="en">Control software intern</span><span lang="tr">Kontrol yazılımı stajyeri</span></p>
+        <p lang="en">I'm building in-house control software for an industrial servo drive: a C backend running a 1 ms
+          real-time loop over EtherCAT, a Python GUI with live plots, and test scripts. I tuned the cascaded loops
+          from a model identified on the test bench instead of by trial and error, which brought step overshoot
+          from over 40% down to under 20% on the real motor.</p>
+        <p lang="tr">Endüstriyel bir servo sürücü için şirket içi kontrol yazılımı geliştiriyorum: EtherCAT üzerinden 1 ms
+          gerçek zamanlı döngüde çalışan bir C arka ucu, canlı grafikli bir Python arayüzü ve test betikleri.
+          Kademeli döngüleri deneme-yanılmayla değil, test tezgâhında tanımladığım modelden ayarladım; gerçek
+          motorda basamak aşımı %40'ın üstünden %20'nin altına indi.</p>
+      </div>
+    </li>
+    <li>
+      <div class="when"><span lang="en">Mar - May 2026</span><span lang="tr">Mar - May 2026</span></div>
+      <div>
+        <h3>ToEmotional</h3>
+        <p class="org"><span lang="en">Electronics and control intern</span><span lang="tr">Elektronik ve kontrol stajyeri</span></p>
+        <p lang="en">Wrote the electronics and servo control software for a guide robot for children on the autism
+          spectrum, a TÜBİTAK-approved project.</p>
+        <p lang="tr">Otizm spektrumundaki çocuklar için geliştirilen, TÜBİTAK onaylı bir rehber robotun elektronik ve
+          servo kontrol yazılımını yazdım.</p>
+      </div>
+    </li>
+  </ol>
+
+</section>
+
+<section id="education" class="wrap">
+  <h2><span lang="en">Education</span><span lang="tr">Eğitim</span></h2>
+  <ol class="timeline">
+    <li>
+      <div class="when">2020 - 2026</div>
+      <div>
+        <h3><span lang="en">Istanbul Technical University</span><span lang="tr">İstanbul Teknik Üniversitesi</span></h3>
+        <p class="org"><span lang="en">B.Sc. Control and Automation Engineering</span><span lang="tr">Kontrol ve Otomasyon Mühendisliği, lisans</span></p>
+      </div>
+    </li>
+  </ol>
+
+  <p class="tools" lang="en"><strong>Tools I use most:</strong> C and C++, Python, MATLAB and Simulink, ROS 2,
+    Gazebo, MuJoCo, Linux and Git. On the control side, loop tuning, system identification and computed-torque
+    control; on the real-time side, EtherCAT with the IgH master and the CiA 402 profile. Some PLC work in TIA Portal.</p>
+  <p class="tools langs" lang="en"><strong>Languages:</strong> Turkish, English.</p>
+  <p class="tools" lang="tr"><strong>En çok kullandıklarım:</strong> C ve C++, Python, MATLAB ve Simulink, ROS 2,
+    Gazebo, MuJoCo, Linux ve Git. Kontrol tarafında döngü ayarı, sistem tanılama ve hesaplanmış tork kontrolü;
+    gerçek zamanlı tarafta IgH master ile EtherCAT ve CiA 402 profili. Biraz da TIA Portal'da PLC.</p>
+  <p class="tools langs" lang="tr"><strong>Diller:</strong> Türkçe, İngilizce.</p>
+</section>
+
+<section id="contact" class="wrap contact">
+  <h2><span lang="en">Say hello</span><span lang="tr">Bana ulaşın</span></h2>
+  <p lang="en">Email is the best way to reach me: <a href="mailto:tylndrsn@gmail.com">tylndrsn@gmail.com</a>.<br>
+    I'm also on <a href="https://www.linkedin.com/in/ali-taylan-dursun-92a599231">LinkedIn</a>.</p>
+  <p lang="tr">Bana en kolay e-postayla ulaşırsınız: <a href="mailto:tylndrsn@gmail.com">tylndrsn@gmail.com</a>.<br>
+    <a href="https://www.linkedin.com/in/ali-taylan-dursun-92a599231">LinkedIn</a>'de de varım.</p>
+</section>
+
+</main>
+
+<footer class="wrap foot">
+  <span lang="en">Istanbul, 2026</span><span lang="tr">İstanbul, 2026</span>
+</footer>
+
+<script>
+(function () {
+  var d = document.documentElement;
+  function save(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  document.getElementById('lang-toggle').addEventListener('click', function () {
+    var next = d.getAttribute('data-lang') === 'tr' ? 'en' : 'tr';
+    d.setAttribute('data-lang', next); d.setAttribute('lang', next); save('lang', next);
+  });
+  document.getElementById('theme-toggle').addEventListener('click', function () {
+    var cur = d.getAttribute('data-theme') ||
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    var next = cur === 'dark' ? 'light' : 'dark';
+    d.setAttribute('data-theme', next); save('theme', next);
+  });
+})();
+(function () {
+  // Play videos only while they are on screen.
+  var vids = document.querySelectorAll('video[data-autoplay]');
+  if (!('IntersectionObserver' in window)) { vids.forEach(function (v) { v.play().catch(function () {}); }); return; }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.play().catch(function () {}); } else { e.target.pause(); }
+    });
+  }, { threshold: 0.25 });
+  vids.forEach(function (v) { io.observe(v); });
+})();
+(function () {
+  // Mobile menu: open/close the nav, close on link tap, outside tap or Escape.
+  var top = document.querySelector('.top'), btn = document.getElementById('menu-toggle');
+  function set(open) { top.classList.toggle('menu-open', open); btn.setAttribute('aria-expanded', open ? 'true' : 'false'); }
+  btn.addEventListener('click', function (e) { e.stopPropagation(); set(!top.classList.contains('menu-open')); });
+  document.querySelectorAll('#site-nav a').forEach(function (a) { a.addEventListener('click', function () { set(false); }); });
+  document.addEventListener('click', function (e) { if (!top.contains(e.target)) set(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
+})();
+</script>
+</body>
+</html>
